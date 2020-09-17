@@ -6,7 +6,8 @@ defmodule Absinthe.Relay.Connection.Options do
           optional(:after) => nil | Connection.cursor(),
           optional(:before) => nil | Connection.cursor(),
           optional(:first) => nil | pos_integer(),
-          optional(:last) => nil | pos_integer()
+          optional(:last) => nil | pos_integer(),
+          optional(:offset) => nil | pos_integer()
         }
 
   defstruct after: nil, before: nil, first: nil, last: nil
