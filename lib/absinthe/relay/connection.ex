@@ -557,6 +557,10 @@ defmodule Absinthe.Relay.Connection do
         {:error, "Invalid cursor provided as `before` argument"}
     end
   end
+  
+  def offset(%{offset: offset}) when is_int(cursor) do
+      {:ok, max(offset, 0)}
+  end
 
   def offset(_), do: {:ok, nil}
 
