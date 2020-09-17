@@ -559,7 +559,7 @@ defmodule Absinthe.Relay.Connection do
     end
   end
   
-  def offset(%{offset: offset}) when is_integer(cursor) do
+  def offset(%{offset: offset}) when is_integer(offset) do
       {:ok, max(offset, 0)}
   end
 
